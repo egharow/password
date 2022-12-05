@@ -1,7 +1,6 @@
 import { useState } from "react"; 
 function Counter(props){
-    const {delta} = props
-    const {max} = props
+    const {delta , max} = props
     const [count, setCount] =useState(1)
     function incr(){
         setCount(

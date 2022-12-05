@@ -12,7 +12,7 @@ function App() {
   const [max, setMax] = useState(1)
   function handleMax (m){
     console.log(m);
-    setMax((m.target.value))}
+    setMax(Number(m.target.value))}
 
   return (
     <div className="App">
