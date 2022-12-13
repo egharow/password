@@ -1,21 +1,23 @@
 import { useState,useEffect } from "react"; 
 
-function password(props){
-    const {password} = props
-    const [count, setCount] =useState(1)
+function Password(props){
+    const {pass} = props
+    const [passLevel, setPassLevel] = useState("Weak")
 
-    /*useEffect(()=>{
-        if(needToReset)
-        setCount(0)
-        getReset(false)
-    },[needToReset, getReset])*/
-    
+    useEffect(()=>{
+        if(pass.length<3)
+        setPassLevel("weak")
+        if(pass.length>2 && pass.length<7)
+        setPassLevel("Medium")
+        if(pass.length>6)
+        setPassLevel("High")
+    },[setPassLevel, pass])
+
     return (
         <div>
-            
-
+            <p>{passLevel}</p>
         </div>
 
     )
     }
-export default password;
+export default Password;
