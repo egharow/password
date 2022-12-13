@@ -2,19 +2,32 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import password from './password';
 
- function App() {
-  const [pass , setPass] = useState("")
-
-  function checkPass(event){
-    console.log(event)
-    /*setStrength(event.target.value)*/
-  }
-  return(
+function App() {
+  const [delta, setDelta] = useState(1)
+  const [max, setMax] = useState(10)
+  const [restart, setReset] = useState(false)
+  
+  function handleDelta (event){
+  console.log(event);
+  setDelta(Number(event.target.value))
+  } 
+  
+  function handleMax (m){
+    console.log(m);
+    setMax((m.target.value))}
+ 
+    function getReset(data){
+    console.log(data)
+    setReset(data)
+  }/*
+  return (
     <div className="App">
-      Enter Password:
-    <input type="password" /*value={pass}*/ onChange= {checkPass} /> 
-    
-    <button>Submit</button>
+      Delta
+      <input type= "number" value= {delta} onChange = {handleDelta}/>
+      <p/>Maximum Number
+      <input type= "number" value= {max} onChange={handleMax} />
+      <Counter delta = {delta} max ={max} getReset={getReset} needToReset={restart}/>
+      <Counter delta = {delta} max ={max} getReset={getReset} needToReset={restart}/>
     </div>
     );
 }
