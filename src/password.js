@@ -4,11 +4,11 @@ function password(props){
     const {password} = props
     const [count, setCount] =useState(1)
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         if(needToReset)
         setCount(0)
         getReset(false)
-    },[needToReset, getReset])
+    },[needToReset, getReset])*/
     
     return (
         <div>
