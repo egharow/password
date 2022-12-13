@@ -4,6 +4,8 @@ import Password from './password';
 
 function App() {
   const [pass, setPass] = useState()
+  /*const[allowSumbit, setSubmit]*/
+
   function handlePass(p){
     setPass(p.target.value)
   }
@@ -12,7 +14,7 @@ function App() {
     <div className="App">
       Enter Password:
       <input type= "password" value= {pass} onChange = {handlePass}/>
-      <button>Sumbit</button>
+      <button>Submit</button>
       <Password pass={pass} />
 
     </div>
