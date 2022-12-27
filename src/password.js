@@ -1,23 +1,25 @@
 import { useState,useEffect } from "react"; 
 
 function Password(props){
-    const {pass, allowSumbit} = props
-    const [passLevel, setPassLevel] = useState("Weak")
+    const {pass, allow} = props;
+    const [passLevel, setPassLevel] = useState('Weak')
 
     useEffect(()=>{
         if(pass.length<3){
         setPassLevel("weak")
-        allowSumbit(false)}
+        allow(true)
+        }
 
-        if(pass.length>2 && pass.length<7){
+        else if(pass.length>2 && pass.length<7){
             setPassLevel("Medium")
-            allowSumbit(true)}
+            allow(false)
+            }
  
-        if(pass.length>6){
+        else if(pass.length>6){
             setPassLevel("High")
-            allowSumbit(true)}
-
-    },[setPassLevel, pass,allowSumbit]) 
+            allow(false)
+            }
+    },[setPassLevel,pass.length]) 
  
     return (
         <div>
