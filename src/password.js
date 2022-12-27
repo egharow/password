@@ -15,7 +15,7 @@ function Password(props){
             setPassLevel("High")
             /*allowSumbit(true)}*/}
     },[setPassLevel, pass,/*allowSumbit*/])
-
+  
     return (
         <div>
             <p>{passLevel}</p>

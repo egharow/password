@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import Password from './password';
-
+ 
 function App() {
   const [pass, setPass] = useState()
   /*const[allowSumbit, setSubmit]*/
