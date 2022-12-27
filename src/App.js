@@ -4,7 +4,7 @@ import Password from './password';
  
 function App() {
   const [pass, setPass] = useState()
-  /*const[allowSumbit, setSubmit]*/
+  const[allowSumbit, setSubmit] = useState(true)
 
   function handlePass(p){
     setPass(p.target.value)
