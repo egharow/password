@@ -3,8 +3,8 @@ import { useState } from 'react';
 import Password from './password';
  
 function App() {
-  const [pass, setPass] = useState()
-  const[allowSumbit, setSubmit] = useState(true)
+  const [pass, setPass] = useState('')
+  const[allowSumbit, setAllowSubmit] = useState(true)
 
   function handlePass(p){
     setPass(p.target.value)
@@ -13,12 +13,11 @@ function App() {
   return (
     <div className="App">
       Enter Password:
-      <input type= "password" value= {pass} onChange = {handlePass}/>
-      <button>Submit</button>
-      <Password pass={pass} />
+      <input type= "password" value= {pass} onChange = {handlePass}></input>
+      <button disabled= {allowSumbit}>Submit</button>
+      <Password pass={pass} allow= {setAllowSubmit}></Password>
 
     </div>
     );
 }
-
 export default App;
