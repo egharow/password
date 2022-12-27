@@ -20,7 +20,7 @@ function Password(props){
         <div>
             <p>{passLevel}</p>
         </div>
-
+ 
     )
     }
 export default Password;
